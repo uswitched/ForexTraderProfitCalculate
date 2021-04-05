@@ -6,7 +6,7 @@ object ForexProfitCalculateTerminal {
         var result: Double = deposit
 
         var percentTask = 3.5F
-        var percentWithdrawProfit=0.1F
+        var percentWithdrawProfit=0.05F
         val percentDecrease = 0.995F
 
         var taskProfit: Double
@@ -42,8 +42,7 @@ object ForexProfitCalculateTerminal {
 
             i += 1
             percentTask *= percentDecrease
-            if(percentWithdrawProfit >= 0.01F)
-                percentWithdrawProfit *= percentDecrease
+            //percentWithdrawProfit *= percentDecrease
 
 
         }
