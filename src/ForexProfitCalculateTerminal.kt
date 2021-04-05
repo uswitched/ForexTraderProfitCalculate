@@ -8,6 +8,7 @@ object ForexProfitCalculateTerminal {
         var percentTask = 3.5F
         var percentWithdrawProfit=0.05F
         val percentDecrease = 0.995F
+        val minimumPercentUp = 0.5
 
         var taskProfit: Double
         var dayClearProfit: Double
@@ -41,10 +42,8 @@ object ForexProfitCalculateTerminal {
             println()
 
             i += 1
-            percentTask *= percentDecrease
+            if(percentTask>minimumPercentUp) percentTask *= percentDecrease
             //percentWithdrawProfit *= percentDecrease
-
-
         }
     }
 }
